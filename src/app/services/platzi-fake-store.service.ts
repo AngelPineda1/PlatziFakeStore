@@ -24,4 +24,8 @@ export class PlatziFakeStoreService {
 
     return this.http.post(this.apiUrl,product)
   }
+
+  getCategories():Observable<any>{
+    return this.http.get('https://api.escuelajs.co/api/v1/categories');
+  }
 }
