@@ -20,4 +20,8 @@ export class PlatziFakeStoreService {
   getProduct(id: number): Observable<any> {
     return this.http.get(`${this.apiUrl}/${id}`);
   }
+  Post(product: any){
+
+    return this.http.post(this.apiUrl,product)
+  }
 }
