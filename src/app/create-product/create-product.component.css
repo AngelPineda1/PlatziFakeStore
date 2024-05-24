@@ -1,0 +1,16 @@
+.add-product-card {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  

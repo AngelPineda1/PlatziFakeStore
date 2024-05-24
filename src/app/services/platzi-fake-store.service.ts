@@ -28,4 +28,14 @@ export class PlatziFakeStoreService {
   getCategories():Observable<any>{
     return this.http.get('https://api.escuelajs.co/api/v1/categories');
   }
+  Delete(id:number){
+    console.log(id)
+    console.log(`${this.apiUrl}/${id}`)
+    return this.http.delete(`${this.apiUrl}/${id}`);
+  }
+  update(product: any){
+    console.log(product)
+    return this.http.put(`${this.apiUrl}/${product.id}`,product)
+
+  }
 }

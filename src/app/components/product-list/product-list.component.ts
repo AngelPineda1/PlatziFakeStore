@@ -23,4 +23,17 @@ constructor (private storeService:PlatziFakeStoreService, private router:Router)
   showDetails(productId: number) {
     this.router.navigate(['/products', productId]);
   }
+  navigateToAddProduct(): void {
+    this.router.navigate(['/add-product']);
+  }
+  async Delete(id:number){
+    
+    await this.storeService.Delete(id).subscribe(()=>{
+      window.location.reload();
+    });
+    
+  }
+  navigateToEditProduct(productId: number): void {
+    this.router.navigate(['/edit-product', productId]);
+  }
 }
