@@ -4,8 +4,12 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { CreateProductComponent } from './create-product/create-product.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
+
+
 export const routes: Routes = [
   { path: 'products', component: ProductListComponent }, // Ruta para la lista de productos
+  
+  
   { path: 'products/:id', component: ProductDetailComponent }, // Ruta para los detalles del producto
   { path: 'add-product', component: CreateProductComponent },
   { path: 'edit-product/:id', component: EditProductComponent },

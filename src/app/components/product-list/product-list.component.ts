@@ -16,6 +16,7 @@ constructor (private storeService:PlatziFakeStoreService, private router:Router)
 }
   ngOnInit(): void {
     this.storeService.getProducts().subscribe((data:any)=>{
+      console.log(data);
       this.products=data;
     })
 
@@ -26,6 +27,7 @@ constructor (private storeService:PlatziFakeStoreService, private router:Router)
   navigateToAddProduct(): void {
     this.router.navigate(['/add-product']);
   }
+
   async Delete(id:number){
     
     await this.storeService.Delete(id).subscribe(()=>{
@@ -33,6 +35,8 @@ constructor (private storeService:PlatziFakeStoreService, private router:Router)
     });
     
   }
+
+
   navigateToEditProduct(productId: number): void {
     this.router.navigate(['/edit-product', productId]);
   }

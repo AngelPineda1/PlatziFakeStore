@@ -10,11 +10,13 @@ import { ActivatedRoute,Router } from '@angular/router';
   styleUrl: './create-product.component.css'
 })
 export class CreateProductComponent implements OnInit{
+
 productForm:FormGroup;
 categories:any[]=[];
 
 
-constructor(private fb:FormBuilder,private storeService: PlatziFakeStoreService,private router:Router, private route: ActivatedRoute){
+constructor(private fb:FormBuilder,private storeService: PlatziFakeStoreService,
+  private router:Router, private route: ActivatedRoute){
   this.productForm=this.fb.group({
     title: '',
     price: 0 ,

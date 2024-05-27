@@ -34,7 +34,7 @@ export class EditProductComponent implements OnInit {
 
     this.storeService.getProduct(this.productId).subscribe(product => {
       this.productForm.patchValue(product);
-      console.log(this.productForm.value)
+      
     });
 
     this.storeService.getCategories().subscribe(categories => {
